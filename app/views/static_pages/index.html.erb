@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>$ Sample Payroll App $</title>
+  </head>
+  <body>
+    <h1>welcome to the payroll dashboard</h1>
+
+    <h3>current team:</h3>
+    <table>
+      <tr>
+        <th>name</th>
+        <th>position</th>
+        <th>salary</th>
+      </tr>
+      <% @employees.each do |employee| %>
+        <tr>
+          <th><%= employee.name %></th>
+          <th><%= employee.position.title %></th>
+          <th><%= employee.salary.value %></th>
+        </tr>
+      <% end %>
+    </table>
+  </body>
+</html>
